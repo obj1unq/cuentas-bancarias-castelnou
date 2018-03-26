@@ -13,10 +13,15 @@ object cuentaDeJulian {
 	method saldo() = saldo
 	
 	method depositar(monto) {
-		// TODO
+		saldo = saldo + monto*self.embargo()
 	} 
 
 	method extraer(monto) {
-		// TODO
+		saldo = saldo - monto - self.gastoAdm()
 	}
+	
+	method embargo() = 0.8;
+	
+	method gastoAdm() = 5;
+	 
 }
